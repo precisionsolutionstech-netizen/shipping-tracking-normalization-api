@@ -73,18 +73,6 @@ Shipping tracking normalizer API • UPS FedEx USPS DHL unifier • tracking dat
 
 ---
 
-## Topics
-
-Add these as **GitHub repository topics** so the repo is discoverable: click your repo’s **About** (right sidebar) → gear icon → **Topics** → add:
-
-| Topics to add |
-|----------------|
-| `shipping` `tracking` `api` `normalization` `logistics` `ups` `fedex` `usps` `dhl` `multi-carrier` `parcel` `delivery` `ecommerce` `rapidapi` |
-
-GitHub doesn’t read topics from a file—you add them once in the repo settings. [How to add topics →](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics)
-
----
-
 ## Quick Start
 
 **Endpoint:** `POST /normalize`  
