@@ -10,8 +10,6 @@
 
 **[Try the API on RapidAPI →](https://rapidapi.com/precisionsolutionstech/api/shipping-tracking-data-normalization)**
 
-**Topics:** `shipping` `tracking` `api` `normalization` `logistics` `ups` `fedex` `usps` `dhl` `multi-carrier` `parcel` `delivery` `rapidapi` · *Add these as [GitHub repository topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) (repo → About → ⚙️ → Topics) for discoverability.*
-
 ---
 
 ## Table of Contents
