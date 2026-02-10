@@ -10,12 +10,15 @@
 
 **[Try the API on RapidAPI →](https://rapidapi.com/precisionsolutionstech/api/shipping-tracking-data-normalization)**
 
+**Topics:** `shipping` `tracking` `api` `normalization` `logistics` `ups` `fedex` `usps` `dhl` `multi-carrier` `parcel` `delivery` `rapidapi` · *Add these as [GitHub repository topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) (repo → About → ⚙️ → Topics) for discoverability.*
+
 ---
 
 ## Table of Contents
 
 - [Why You Need This API](#why-you-need-this-api)
 - [What is the Shipping & Tracking Normalization API?](#what-is-the-shipping--tracking-normalization-api)
+- [Topics](#topics)
 - [Quick Start](#quick-start)
 - [Real-World Examples](#real-world-examples)
 - [API Reference](#api-reference)
@@ -69,6 +72,18 @@ The **Shipping & Tracking Normalization API** is a REST API that converts carrie
 ### Also Searchable As
 
 Shipping tracking normalizer API • UPS FedEx USPS DHL unifier • tracking data canonical schema • multi-carrier tracking API • parcel tracking normalization • shipment status normalization API • delivery tracking combiner • tracking event timeline API • unified tracking API • carrier-agnostic tracking • logistics tracking normalization • e-commerce tracking API
+
+---
+
+## Topics
+
+Add these as **GitHub repository topics** so the repo is discoverable: click your repo’s **About** (right sidebar) → gear icon → **Topics** → add:
+
+| Topics to add |
+|----------------|
+| `shipping` `tracking` `api` `normalization` `logistics` `ups` `fedex` `usps` `dhl` `multi-carrier` `parcel` `delivery` `ecommerce` `rapidapi` |
+
+GitHub doesn’t read topics from a file—you add them once in the repo settings. [How to add topics →](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics)
 
 ---
 
