@@ -1,14 +1,14 @@
 # Shipping & Tracking Normalization API — Examples & Documentation
 
 <p align="center">
-  <a href="https://rapidapi.com/precisionsolutionstech/api/shipping-tracking-normalization-api">
+  <a href="https://rapidapi.com/precisionsolutionstech/api/shipping-tracking-data-normalization">
     <img src="https://img.shields.io/badge/Try_on_RapidAPI-Shipping_%26_Tracking_Normalization-00A1F1?style=for-the-badge&logo=rapidapi" alt="Try Shipping & Tracking Normalization API on RapidAPI" />
   </a>
 </p>
 
 **Unify UPS, FedEx, USPS, DHL, and every other carrier into one canonical tracking schema.** Stop maintaining per-carrier parsers, status maps, and timezone hacks. One API call turns tracking numbers and carrier payloads into a single shipment model—same status taxonomy, chronological event timeline, provenance, and confidence. Same input → same output every time. You cannot scale multi-carrier tracking without it.
 
-**[Try the API on RapidAPI →](https://rapidapi.com/precisionsolutionstech/api/shipping-tracking-normalization-api)**
+**[Try the API on RapidAPI →](https://rapidapi.com/precisionsolutionstech/api/shipping-tracking-data-normalization)**
 
 ---
 
@@ -75,15 +75,15 @@ Shipping tracking normalizer API • UPS FedEx USPS DHL unifier • tracking dat
 ## Quick Start
 
 **Endpoint:** `POST /normalize`  
-**Try it:** [RapidAPI — Shipping & Tracking Normalization API](https://rapidapi.com/precisionsolutionstech/api/shipping-tracking-normalization-api)
+**Try it:** [RapidAPI — Shipping & Tracking Normalization API](https://rapidapi.com/precisionsolutionstech/api/shipping-tracking-data-normalization)
 
 ### cURL
 
 ```bash
-curl -X POST "https://shipping-tracking-normalization-api.p.rapidapi.com/normalize" \
+curl -X POST "https://shipping-tracking-data-normalization.p.rapidapi.com/normalize" \
   -H "Content-Type: application/json" \
   -H "x-rapidapi-key: YOUR_RAPIDAPI_KEY" \
-  -H "x-rapidapi-host: shipping-tracking-normalization-api.p.rapidapi.com" \
+  -H "x-rapidapi-host: shipping-tracking-data-normalization.p.rapidapi.com" \
   -d '{
     "inputs": [
       { "trackingNumber": "1Z999AA10123456784", "carrier": "ups" },
@@ -95,12 +95,12 @@ curl -X POST "https://shipping-tracking-normalization-api.p.rapidapi.com/normali
 ### JavaScript / Node.js
 
 ```javascript
-const response = await fetch('https://shipping-tracking-normalization-api.p.rapidapi.com/normalize', {
+const response = await fetch('https://shipping-tracking-data-normalization.p.rapidapi.com/normalize', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
     'x-rapidapi-key': 'YOUR_RAPIDAPI_KEY',
-    'x-rapidapi-host': 'shipping-tracking-normalization-api.p.rapidapi.com'
+    'x-rapidapi-host': 'shipping-tracking-data-normalization.p.rapidapi.com'
   },
   body: JSON.stringify({
     inputs: [
@@ -118,11 +118,11 @@ console.log(shipments); // Same schema for every carrier
 ```python
 import requests
 
-url = "https://shipping-tracking-normalization-api.p.rapidapi.com/normalize"
+url = "https://shipping-tracking-data-normalization.p.rapidapi.com/normalize"
 headers = {
     "Content-Type": "application/json",
     "x-rapidapi-key": "YOUR_RAPIDAPI_KEY",
-    "x-rapidapi-host": "shipping-tracking-normalization-api.p.rapidapi.com"
+    "x-rapidapi-host": "shipping-tracking-data-normalization.p.rapidapi.com"
 }
 payload = {
     "inputs": [
@@ -141,10 +141,10 @@ print(data["metadata"])   # totalInputItems, normalizedCount, errorCount
 Send the raw JSON you got from a carrier API to get a full event timeline and status.
 
 ```bash
-curl -X POST "https://shipping-tracking-normalization-api.p.rapidapi.com/normalize" \
+curl -X POST "https://shipping-tracking-data-normalization.p.rapidapi.com/normalize" \
   -H "Content-Type: application/json" \
   -H "x-rapidapi-key: YOUR_RAPIDAPI_KEY" \
-  -H "x-rapidapi-host: shipping-tracking-normalization-api.p.rapidapi.com" \
+  -H "x-rapidapi-host: shipping-tracking-data-normalization.p.rapidapi.com" \
   -d '{
     "inputs": [{
       "trackingNumber": "1Z999AA10123456784",
@@ -172,11 +172,11 @@ curl -X POST "https://shipping-tracking-normalization-api.p.rapidapi.com/normali
 You run a marketplace. Orders are fulfilled by different sellers using UPS, FedEx, USPS, and DHL. You need one tracking UI that works for every order.
 
 ```javascript
-const API_URL = 'https://shipping-tracking-normalization-api.p.rapidapi.com/normalize';
+const API_URL = 'https://shipping-tracking-data-normalization.p.rapidapi.com/normalize';
 const RAPIDAPI_HEADERS = {
   'Content-Type': 'application/json',
   'x-rapidapi-key': process.env.RAPIDAPI_KEY,
-  'x-rapidapi-host': 'shipping-tracking-normalization-api.p.rapidapi.com'
+  'x-rapidapi-host': 'shipping-tracking-data-normalization.p.rapidapi.com'
 };
 
 async function getUnifiedTracking(orders) {
@@ -201,7 +201,7 @@ Support agents should see "In transit" and "Out for delivery" instead of carrier
 
 ```javascript
 async function getTrackingForSupport(trackingNumber, carrier) {
-  const res = await fetch('https://shipping-tracking-normalization-api.p.rapidapi.com/normalize', {
+  const res = await fetch('https://shipping-tracking-data-normalization.p.rapidapi.com/normalize', {
     method: 'POST',
     headers: RAPIDAPI_HEADERS,
     body: JSON.stringify({
@@ -225,7 +225,7 @@ When a carrier webhook fires, normalize the payload once and drive all notificat
 
 ```javascript
 async function onCarrierWebhook(webhookBody) {
-  const res = await fetch('https://shipping-tracking-normalization-api.p.rapidapi.com/normalize', {
+  const res = await fetch('https://shipping-tracking-data-normalization.p.rapidapi.com/normalize', {
     method: 'POST',
     headers: RAPIDAPI_HEADERS,
     body: JSON.stringify({
@@ -253,11 +253,11 @@ import requests
 
 def normalize_batch_for_analytics(tracking_inputs: list) -> list:
     res = requests.post(
-        "https://shipping-tracking-normalization-api.p.rapidapi.com/normalize",
+        "https://shipping-tracking-data-normalization.p.rapidapi.com/normalize",
         headers={
             "Content-Type": "application/json",
             "x-rapidapi-key": RAPIDAPI_KEY,
-            "x-rapidapi-host": "shipping-tracking-normalization-api.p.rapidapi.com"
+            "x-rapidapi-host": "shipping-tracking-data-normalization.p.rapidapi.com"
         },
         json={"inputs": tracking_inputs}
     )
@@ -369,7 +369,7 @@ Explore more developer tools from [Precision Solutions Tech on RapidAPI](https:/
 
 | API | Description |
 |-----|-------------|
-| [**Shipping & Tracking Normalization**](https://rapidapi.com/precisionsolutionstech/api/shipping-tracking-normalization-api) | This API — unify UPS, FedEx, USPS, DHL into one schema |
+| [**Shipping & Tracking Normalization**](https://rapidapi.com/precisionsolutionstech/api/shipping-tracking-data-normalization) | This API — unify UPS, FedEx, USPS, DHL into one schema |
 | [Calendar Event Normalization](https://rapidapi.com/precisionsolutionstech/api/calendar-event-normalization) | Normalize calendar events from Google, Outlook, Apple, and more |
 | [Job Posting Normalization](https://rapidapi.com/precisionsolutionstech/api/job-posting-normalization-api) | Normalize job postings from LinkedIn, Indeed, Greenhouse, 25+ platforms |
 | [API Error & Status Normalization](https://rapidapi.com/precisionsolutionstech/api/api-error-status-normalization) | Canonical error taxonomy and retry guidance |
@@ -423,6 +423,6 @@ UPS, FedEx, USPS, and DHL have first-class normalizers. Other carriers use `cust
 ---
 
 <p align="center">
-  <a href="https://rapidapi.com/precisionsolutionstech/api/shipping-tracking-normalization-api">Try Shipping & Tracking Normalization API on RapidAPI</a> ·
+  <a href="https://rapidapi.com/precisionsolutionstech/api/shipping-tracking-data-normalization">Try Shipping & Tracking Normalization API on RapidAPI</a> ·
   <a href="https://rapidapi.com/user/precisionsolutionstech">All APIs by Precision Solutions Tech</a>
 </p>
